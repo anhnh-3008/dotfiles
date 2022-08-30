@@ -1,0 +1,39 @@
+[user]
+  
+	name = anhnh-1028
+  email = nguyen.hoang.anh-c@sun-asterisk.com
+
+[includeIf "gitdir:~/personal/"]
+  
+	path = ~/personal/.gitconfig-personal
+
+[includeIf "gitdir:~/work/"]
+  
+	path = ~/work/.gitconfig-work
+
+[include]
+
+	path = ~/.gitconfig.local
+
+[color "branch"]
+
+  current = green bold
+  local = green
+  remote = yellow
+
+[color "diff"]
+
+  frag = magenta
+  meta = yellow
+
+  new = green
+  old = red
+
+  newMoved = cyan
+  oldMoved = blue
+
+[color "status"]
+
+  added = green reverse
+  changed = yellow reverse
+  untracked = red reverse
