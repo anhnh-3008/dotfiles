@@ -37,3 +37,17 @@
   added = green reverse
   changed = yellow reverse
   untracked = red reverse
+
+[alias]
+	co = checkout
+	br = branch
+	st = status
+	uncommit = reset --soft HEAD~1
+
+	# Switch to a branch, creating it if necessary
+	gco = "!f() { git checkout -b \"$1\" 2> /dev/null || git checkout \"$1\"; }; f"
+
+[core]
+	excludesfile = ~/.gitignore
+
+	editor = vim
