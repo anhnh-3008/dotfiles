@@ -1,0 +1,13 @@
+#!/bin/sh
+
+FILES_PATTERN='\.?$'
+
+FORBIDDEN='binding.pry\|byebug\|console.log\|gkc_hash_code'
+
+git diff --cached --name-only | \
+    grep -E $FILES_PATTERN | \
+    xargs grep --color --with-filename -n $FORBIDDEN && \
+    echo 'COMMIT REJECTED' && \
+    exit 1
+
+exit 0
